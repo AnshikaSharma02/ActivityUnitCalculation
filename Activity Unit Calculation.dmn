@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_6E100A4F-B24E-41A6-B98B-08469A1F6832" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_AE1B55D5-6BCF-4225-99BD-1C402039154F" name="Activity Unit Calculation" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_6E100A4F-B24E-41A6-B98B-08469A1F6832">
+  <dmn:extensionElements/>
+  <dmn:inputData id="_48524222-7AC3-47F9-887D-C3EE79CD7465" name="Treatment">
+    <dmn:extensionElements/>
+    <dmn:variable id="_F88A1B44-D9F3-4E3C-BA11-D189DA3F100E" name="Treatment" typeRef="string"/>
+  </dmn:inputData>
+  <dmn:inputData id="_2C48D297-DBE7-4901-9BA2-228509133226" name="ClaimRegion">
+    <dmn:extensionElements/>
+    <dmn:variable id="_729EA519-5B8E-4B06-A500-97C2D000283F" name="ClaimRegion"/>
+  </dmn:inputData>
+  <dmn:inputData id="_F813B226-C169-4A2C-8B4A-0671D9C37121" name="Age">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B94E9D44-7929-434A-8AD5-567E9C3AB3F2" name="Age"/>
+  </dmn:inputData>
+  <dmn:inputData id="_1DBB04E3-26B0-4212-9725-F9FC21091D65" name="CurrentDate">
+    <dmn:extensionElements/>
+    <dmn:variable id="_063B89B2-099A-445D-A1E7-EDE49CC7AD59" name="CurrentDate"/>
+  </dmn:inputData>
+  <dmn:inputData id="_C7335816-184D-43E6-A2ED-65A59BFD6ECB" name="SubmissionDate">
+    <dmn:extensionElements/>
+    <dmn:variable id="_37B25752-858F-4FA8-879B-52325E6A5D11" name="SubmissionDate"/>
+  </dmn:inputData>
+  <dmn:decision id="_618F2CD1-6326-4589-B282-52AB7637C13E" name="TreatmentFound">
+    <dmn:extensionElements/>
+    <dmn:variable id="_92A76CEF-2B75-47DB-94F2-F4B3A64DBCD4" name="TreatmentFound" typeRef="boolean"/>
+    <dmn:informationRequirement id="_46DF3A76-22AD-4C8D-A89B-5F31FEA75B64">
+      <dmn:requiredInput href="#_48524222-7AC3-47F9-887D-C3EE79CD7465"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_3CB8564B-7A82-4010-BD52-D7869B516CB6" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_D5F882D8-93E1-4447-B9FD-18B5B665E425">
+        <dmn:inputExpression id="_2BDFE142-3F71-448D-BDA1-DD7459A97215" typeRef="string">
+          <dmn:text>Treatment</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_6FA0D834-35A0-465E-B567-811C0A26A069"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_A7111176-E8CB-4FD5-A62D-21812A0AE5E8">
+        <dmn:inputEntry id="_D1834831-F9D8-4A19-B9B0-B2B19FD3D1FD">
+          <dmn:text>"Band 1"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_BADCE0E8-73DE-4E76-8C4F-E1C5F442921F">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_0EDDE711-4ABC-40BF-B2B9-32FBD22B75C9">
+        <dmn:inputEntry id="_44B69E79-C511-4898-9E70-46355CF3BBE0">
+          <dmn:text>"Band 2" </dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_A002DCBD-4FEE-45BE-8248-874FB8263E4E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_526F6F57-ACEF-4960-8AD6-3A0495BAB6D2">
+        <dmn:inputEntry id="_160C6CC7-17DB-42B7-808F-566901B410A2">
+          <dmn:text>"Band 3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_820333E3-8F9D-4776-8F39-C1AF11A49CA8">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_C5D80519-DEFA-4796-B24A-D2598EF3429C">
+        <dmn:inputEntry id="_15AED60E-18A9-43C8-8E37-FC545121BFD7">
+          <dmn:text>"Urgent Treatment"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_BE764065-4D94-42D0-8540-9E1FC972C032">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B785B0BA-AD55-4153-B786-371D806F8DE3">
+        <dmn:inputEntry id="_BF72073F-D3FF-4E0E-925C-6203DE9C015C">
+          <dmn:text>"Triage Claim"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D1F0033E-4A18-4A37-9E4B-79C9D04367A0">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_E7AA9080-7527-430D-9EEF-0E9823B159A1">
+        <dmn:inputEntry id="_55EA7410-2D88-4F60-ABF0-5F5888AD4368">
+          <dmn:text>"Ortho Assessment and Review"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_985F9623-8187-4038-AE75-C9A306C215DF">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B30B7ABB-A2B4-49FE-8436-08339AB1168A">
+        <dmn:inputEntry id="_22A00CA7-8CCE-45EE-A5E4-44731DE6CB2D">
+          <dmn:text>"Ortho Assessment and Refuse"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B6716201-25CC-428B-809B-3BA943BB9121">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F515F02D-D81F-4375-9DDE-CA67ADD4506C">
+        <dmn:inputEntry id="_9933B2FE-B216-40F1-95DD-6CE786FB18CC">
+          <dmn:text>"Appliance Fitted"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_708F84E5-C8AB-45A9-9ECC-3EC9620431EF">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_AE78B483-3509-4CDB-AB72-EFF9ED7A1DB9">
+        <dmn:inputEntry id="_D8F40916-618F-4B69-962C-84CEED655308">
+          <dmn:text>"Ortho Assessment and Debond"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_A9E80A0A-F9DA-41B7-B4F9-EEEDE49CAEE4">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_C071EE4B-D358-400E-99C2-4E010D69971C">
+        <dmn:inputEntry id="_3C295CBA-6473-4231-838E-8D412525733A">
+          <dmn:text>"Orthodontic Assessment and Acceptance"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4C32E201-4AA2-463A-9030-C7178FBAFD52">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B1D2A25A-DA25-4482-A7C4-FA570671D709">
+        <dmn:inputEntry id="_66FE36D2-C770-44C2-A219-0E91BDD799C2">
+          <dmn:text>"Issue of Prescription"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_49C69E44-3CAB-47E3-A684-4B59D169A30A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_4ED2CC28-CF98-4CE0-A248-0F94EC30EAA0">
+        <dmn:inputEntry id="_2BCFE856-B458-41AA-AC63-11CA78491F28">
+          <dmn:text>"Arrest of Bleeding"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_BE4ED796-9A4E-4B3E-A173-3BEFAA22D8C1">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_B7B79C3C-8A23-48F9-AD6C-3A2B5BE8C519">
+        <dmn:inputEntry id="_A63F9C7C-3D79-4DE9-8BB1-D5B557EAF7A2">
+          <dmn:text>"Removal of Sutures"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_DCDB6F89-55FC-4508-BFCF-5C0016748BA1">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_6A6E697C-8E4B-404F-B09F-6FB7BBF558AB">
+        <dmn:inputEntry id="_30C17E0E-5F2D-4BEA-9007-3D5DD6C89BFC">
+          <dmn:text>"Repairs to Dentures"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5038E3E3-8988-4FCB-87E7-A2DEFF0ABD9E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1F889021-1181-40DC-8E14-7AFF7F26D249">
+        <dmn:inputEntry id="_FAB333DC-403F-4553-A123-80B7862BF021">
+          <dmn:text>"Reg9"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_CAA39D7B-BE0B-49A4-BEAB-6EF4C538339A">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_74B5BC8B-5523-4415-8501-BB9EF7194C45">
+        <dmn:inputEntry id="_B137E36C-FA7E-4B81-8F57-2AA02BF687C1">
+          <dmn:text>"Bridge Repairs"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_39B8FF1D-5F98-4B91-8378-8A7D990303A1">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_6BD127E1-1F85-472C-9D77-2EFFFD08DD7B">
+        <dmn:inputEntry id="_D62D7B85-3176-422E-AB7C-F59BD19BC97B">
+          <dmn:text>"Ortho Treatment Abandoned"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_E882598F-A641-4E31-BC30-01D41D7F0024">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_95ADBB98-6E67-4C7B-9399-D2A775FA2513">
+        <dmn:inputEntry id="_7A9601F2-5776-4E77-9A16-BD180B904065">
+          <dmn:text>"Ortho Treatment Discontinued"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C640F25E-4702-47AC-8B55-0CDCF03A1D74">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_A3F12797-D959-46B5-811A-D32CF96AC5A0">
+        <dmn:inputEntry id="_1C2064EF-F8B1-4869-A3F3-15F9602F9BCA">
+          <dmn:text>"Ortho Treatment Completed"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F19D7303-0983-4BAC-84FD-64D8B25D84C3">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5DD01820-DDAF-4B7C-B8B3-F662F6B0F5D7">
+        <dmn:inputEntry id="_23F802C0-E61E-49AD-8713-BE76E5109323">
+          <dmn:text>"Incomplete Treatment Band 1"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_328B2EF0-ACC3-4BE7-A8CE-6E314169B938">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_024E9A72-7334-474C-AB4E-A903BE6F1C62">
+        <dmn:inputEntry id="_6B971A2D-3990-4685-B056-F4E32DE2B6CF">
+          <dmn:text>"Incomplete Treatment Band 2"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_EF961CF7-089B-4105-B5A8-FAB2DB7E090E">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_8D3AAB9E-080B-42E6-91D9-8F5E1BA7F2BA">
+        <dmn:inputEntry id="_679754DE-9D3E-4E72-8C33-B5D76F61EE4B">
+          <dmn:text>"Incomplete Treatment Band 3"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D34D40BF-3E3F-4F09-A1CD-E438C9C5A35C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_96CAF556-8330-481F-9A69-79D938844069">
+        <dmn:inputEntry id="_05DD6978-704A-44B2-B337-2C38DF0D89D3">
+          <dmn:text>"REG11 Ortho"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_34096B20-7C37-4A78-BCD8-7207B63B483C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5BFDA02B-4D33-4E7B-89F0-D73DCEAA6428">
+        <dmn:inputEntry id="_C5C0C9E3-075D-4BA2-AF38-02ADD832248C">
+          <dmn:text>"Domiciliary Services"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C4FA11FB-4728-4C5A-A85E-0D3759EDA625">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_22E9B1DE-B6A9-4121-A7CB-9CD53C3C1DCE">
+        <dmn:inputEntry id="_29830266-1728-46B8-A8AA-ED09DA175F73">
+          <dmn:text>"Sedation Services"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_09B927D2-AD57-456E-9793-F70D2814DB8D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_E61E952B-130C-4E50-8337-4E9934E96166">
+        <dmn:inputEntry id="_BC89EAED-086E-4927-A0E8-56ECCC4689E1">
+          <dmn:text>"Repair to Appliance Fitted by Another contractor"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_18304869-D081-4028-AA0B-3D0D8721ECB5">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_19B4D5F2-E4A6-4189-80B9-578794EE2818">
+        <dmn:inputEntry id="_9E9DD62B-46A7-49FF-956E-631518DDAB6C">
+          <dmn:text>"Advice Only"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_BF20ED95-A539-4328-8E48-1BEB78E87860">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_2B095981-3D4F-4D74-B283-DA0D1377F6EC">
+        <dmn:inputEntry id="_33973E45-7E06-4624-B8A6-FC5A04C8AEEC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C3AAD541-C024-4C22-8DB9-06B0E6D10D01">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_A80B49B2-504B-4FF3-872B-3065F72154D4" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_3CB8564B-7A82-4010-BD52-D7869B516CB6">
+            <kie:width>50</kie:width>
+            <kie:width>371</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_48524222-7AC3-47F9-887D-C3EE79CD7465" dmnElementRef="_48524222-7AC3-47F9-887D-C3EE79CD7465" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="250" y="277" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_2C48D297-DBE7-4901-9BA2-228509133226" dmnElementRef="_2C48D297-DBE7-4901-9BA2-228509133226" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="469" y="277" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_F813B226-C169-4A2C-8B4A-0671D9C37121" dmnElementRef="_F813B226-C169-4A2C-8B4A-0671D9C37121" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="657" y="286" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_1DBB04E3-26B0-4212-9725-F9FC21091D65" dmnElementRef="_1DBB04E3-26B0-4212-9725-F9FC21091D65" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="868" y="292" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_C7335816-184D-43E6-A2ED-65A59BFD6ECB" dmnElementRef="_C7335816-184D-43E6-A2ED-65A59BFD6ECB" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1027" y="292" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_618F2CD1-6326-4589-B282-52AB7637C13E" dmnElementRef="_618F2CD1-6326-4589-B282-52AB7637C13E" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="239" y="134" width="123" height="56"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_46DF3A76-22AD-4C8D-A89B-5F31FEA75B64-AUTO-TARGET" dmnElementRef="_46DF3A76-22AD-4C8D-A89B-5F31FEA75B64">
+        <di:waypoint x="300" y="302"/>
+        <di:waypoint x="300.5" y="190"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
