@@ -5,22 +5,6 @@
     <dmn:extensionElements/>
     <dmn:variable id="_F88A1B44-D9F3-4E3C-BA11-D189DA3F100E" name="Treatment" typeRef="string"/>
   </dmn:inputData>
-  <dmn:inputData id="_2C48D297-DBE7-4901-9BA2-228509133226" name="ClaimRegion">
-    <dmn:extensionElements/>
-    <dmn:variable id="_729EA519-5B8E-4B06-A500-97C2D000283F" name="ClaimRegion"/>
-  </dmn:inputData>
-  <dmn:inputData id="_F813B226-C169-4A2C-8B4A-0671D9C37121" name="Age">
-    <dmn:extensionElements/>
-    <dmn:variable id="_B94E9D44-7929-434A-8AD5-567E9C3AB3F2" name="Age"/>
-  </dmn:inputData>
-  <dmn:inputData id="_1DBB04E3-26B0-4212-9725-F9FC21091D65" name="CurrentDate">
-    <dmn:extensionElements/>
-    <dmn:variable id="_063B89B2-099A-445D-A1E7-EDE49CC7AD59" name="CurrentDate"/>
-  </dmn:inputData>
-  <dmn:inputData id="_C7335816-184D-43E6-A2ED-65A59BFD6ECB" name="SubmissionDate">
-    <dmn:extensionElements/>
-    <dmn:variable id="_37B25752-858F-4FA8-879B-52325E6A5D11" name="SubmissionDate"/>
-  </dmn:inputData>
   <dmn:decision id="_618F2CD1-6326-4589-B282-52AB7637C13E" name="TreatmentFound">
     <dmn:extensionElements/>
     <dmn:variable id="_92A76CEF-2B75-47DB-94F2-F4B3A64DBCD4" name="TreatmentFound" typeRef="boolean"/>
@@ -364,42 +348,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="250" y="277" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_2C48D297-DBE7-4901-9BA2-228509133226" dmnElementRef="_2C48D297-DBE7-4901-9BA2-228509133226" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="469" y="277" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_F813B226-C169-4A2C-8B4A-0671D9C37121" dmnElementRef="_F813B226-C169-4A2C-8B4A-0671D9C37121" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="657" y="286" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_1DBB04E3-26B0-4212-9725-F9FC21091D65" dmnElementRef="_1DBB04E3-26B0-4212-9725-F9FC21091D65" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="868" y="292" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_C7335816-184D-43E6-A2ED-65A59BFD6ECB" dmnElementRef="_C7335816-184D-43E6-A2ED-65A59BFD6ECB" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1027" y="292" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_618F2CD1-6326-4589-B282-52AB7637C13E" dmnElementRef="_618F2CD1-6326-4589-B282-52AB7637C13E" isCollapsed="false">
